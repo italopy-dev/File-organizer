@@ -1,21 +1,9 @@
 import os
 import shutil
+from settings import documentos, compactados, audios, planilhas, imagens, videos, apresentacoes, executaveis, ebooks, jogos, design, codigos
 
 pasta = input("Digite a pasta que quer organizar(o caminho completo)")
 arquivos = os.listdir(pasta)
-
-documentos = [".txt", ".pdf", ".doc", ".docx", ".rtf"]
-compactados = [".zip", ".rar", ".7z", ".tar"]
-audios = [".mp3", ".wav", ".ogg", ".flac", ".m4a"]
-planilhas = [".xls", ".xlsx", ".csv"]
-imagens = [".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".svg"]
-videos = [".mp4", ".mkv", ".avi", ".mov", ".webm"]
-apresentacoes = [".ppt", ".pptx", ".pps", ".ppsx", ".odp"]
-executaveis = [".exe", ".msi", ".bat"]
-ebooks = [".epub", ".mobi", ".azw3"]
-jogos = [".iso", ".rom", ".sav"]
-design = [".psd", ".ai"]
-codigos = [".py", ".java", ".html", ".css", ".js", ".cpp"]
 
 def mover(nome):
     if not os.path.exists(f"{pasta}/{nome}"):
