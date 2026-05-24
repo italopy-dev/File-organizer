@@ -51,14 +51,4 @@ for a in arquivos:
     elif extensao in codigos:
         mover("códigos")
 
-            
-
-
-    
-
-
-
-
-            
-
     
