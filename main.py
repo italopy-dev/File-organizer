@@ -17,101 +17,53 @@ jogos = [".iso", ".rom", ".sav"]
 design = [".psd", ".ai"]
 codigos = [".py", ".java", ".html", ".css", ".js", ".cpp"]
 
+def mover(nome):
+    if not os.path.exists(f"{pasta}/{nome}"):
+        os.mkdir(f"{pasta}/{nome}")
+        shutil.move(f"{pasta}/{a}", f"{pasta}/{nome}")
+    else:
+        shutil.move(f"{pasta}/{a}", f"{pasta}/{nome}")
+
 for a in arquivos:
     extensao = os.path.splitext(a)[1]
 
     if extensao in documentos:
-        if not os.path.exists(f"{pasta}/documentos"):
-            os.mkdir(f"{pasta}/documentos")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/documentos")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/documentos")
+        mover("documentos")
 
     elif extensao in compactados:
-        if not os.path.exists(f"{pasta}/compactados"):
-            os.mkdir(f"{pasta}/compactados")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/compactados")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/compactados")
+        mover("compactados")
 
     elif extensao in audios:
-        if not os.path.exists(f"{pasta}/audios"):
-            os.mkdir(f"{pasta}/audios")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/audios")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/audios")
+        mover("áudios")
 
     elif extensao in planilhas:
-        if not os.path.exists(f"{pasta}/planilhas"):
-            os.mkdir(f"{pasta}/planilhas")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/planilhas")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/planilhas")
+        mover("planilhas")
 
     elif extensao in imagens:
-        if not os.path.exists(f"{pasta}/imagens"):
-            os.mkdir(f"{pasta}/imagens")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/imagens")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/imagens")
+        mover("imagens")
 
     elif extensao in videos:
-        if not os.path.exists(f"{pasta}/videos"):
-            os.mkdir(f"{pasta}/videos")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/videos")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/videos")
+        mover("videos")
 
     elif extensao in apresentacoes:
-        if not os.path.exists(f"{pasta}/apresentacoes"):
-            os.mkdir(f"{pasta}/apresentacoes")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/apresentacoes")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/apresentacoes")
+        mover("apresentações")
 
     elif extensao in executaveis:
-        if not os.path.exists(f"{pasta}/executaveis"):
-            os.mkdir(f"{pasta}/executaveis")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/executaveis")
+        mover("executáveis")
 
     elif extensao in ebooks:
-        if not os.path.exists(f"{pasta}/ebooks"):
-            os.mkdir(f"{pasta}/ebooks")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/ebooks")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/ebooks")
+        mover("ebooks")
 
     elif extensao in jogos:
-        if not os.path.exists(f"{pasta}/jogos"):
-            os.mkdir(f"{pasta}/jogos")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/jogos")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/jogos")
+        mover("jogos")
 
     elif extensao in design:
-        if not os.path.exists(f"{pasta}/design"):
-            os.mkdir(f"{pasta}/design")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/design")
-
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/design")
+        mover("designs")
 
     elif extensao in codigos:
-        if not os.path.exists(f"{pasta}/codigos"):
-            os.mkdir(f"{pasta}/codigos")
-            shutil.move(f"{pasta}/{a}", f"{pasta}/codigos")
+        mover("códigos")
 
-        else:
-            shutil.move(f"{pasta}/{a}", f"{pasta}/codigos")
+            
 
 
     
