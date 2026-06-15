@@ -3,52 +3,78 @@ import shutil
 from settings import documentos, compactados, audios, planilhas, imagens, videos, apresentacoes, executaveis, ebooks, jogos, design, codigos
 
 pasta = input("Digite a pasta que quer organizar(o caminho completo)")
+if not os.path.isdir(pasta):
+    print("pasta não encontrada")
+    exit()
+
 arquivos = os.listdir(pasta)
 
-def mover(nome):
-    if not os.path.exists(f"{pasta}/{nome}"):
-        os.mkdir(f"{pasta}/{nome}")
-        shutil.move(f"{pasta}/{a}", f"{pasta}/{nome}")
-    else:
-        shutil.move(f"{pasta}/{a}", f"{pasta}/{nome}")
+def mover(arquivo, nome):
+    destino = os.path.join(pasta, nome)
+
+    if not os.path.exists(destino):
+        os.mkdir(destino)
+    
+    inicio = os.path.join(pasta, arquivo)
+    
+    shutil.move(inicio, destino)
 
 for a in arquivos:
-    extensao = os.path.splitext(a)[1]
+    if not os.path.isfile(os.path.join(pasta, a)):
+        continue
+
+    extensao = os.path.splitext(a)[1].lower()
 
     if extensao in documentos:
-        mover("documentos")
+        mover(a, "documentos")
 
     elif extensao in compactados:
-        mover("compactados")
+        mover(a, "compactados")
 
     elif extensao in audios:
-        mover("áudios")
+        mover(a, "áudios")
 
     elif extensao in planilhas:
-        mover("planilhas")
+        mover(a, "planilhas")
 
     elif extensao in imagens:
-        mover("imagens")
+        mover(a, "imagens")
 
     elif extensao in videos:
-        mover("videos")
+        mover(a, "videos")
 
     elif extensao in apresentacoes:
-        mover("apresentações")
+        mover(a, "apresentações")
 
     elif extensao in executaveis:
-        mover("executáveis")
+        mover(a, "executáveis")
 
     elif extensao in ebooks:
-        mover("ebooks")
+        mover(a, "ebooks")
 
     elif extensao in jogos:
-        mover("jogos")
+        mover(a, "jogos")
 
     elif extensao in design:
-        mover("designs")
+        mover(a, "designs")
 
     elif extensao in codigos:
-        mover("códigos")
+        mover(a, "códigos")
+
+
+
+    
+
+
+
+            
+
+
+    
+
+
+
+
+            
 
     
