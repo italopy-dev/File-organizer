@@ -1,11 +1,11 @@
 # File Organizer📁
-A file organizar made with Python.
-## Features
-- Organizes files by extension
-- Automatically creates folders
-- Configurable through 'settings.py'
-## How to use??
-1. Download the project
-2. Run 'main.py'
-3. Enter the folder you want to organize
-4. Done!
+Um organizador de arquivos automático feito em python.
+## Recursos
+- Organiza arquivos por extensões
+- Cria automaticamente as pastas necessárias
+- Configurável através do arquivo'settings.py'
+## Como usar??
+1. Baixe o projeto
+2. Execute 'main.py'
+3. Digite o caminho da pasta que deseja organizar
+4. Pronto!
